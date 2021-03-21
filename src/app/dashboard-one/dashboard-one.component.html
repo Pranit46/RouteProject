@@ -1,0 +1,42 @@
+<section class="container-new">
+
+    <div class="Tank">
+        <div class="Tank-bar">
+            <span type="button" routerLink="/" class="Tank-end">Log out</span>
+        </div>
+    </div>
+
+    <div class="Tank-box" >
+        <h4 class="text"><i>Employee portal</i> </h4>
+   
+<div class="wrapper">
+ <div class="card" *ngFor='let data of dataList | paginate: { itemsPerPage: 4, currentPage: p};'>
+
+    <!-- Card image -->
+    <!-- <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap"> -->
+    <img class="card-img-top" src="{{ data.avatar }}" alt="Card image cap">
+    <!-- Card content -->
+    <div class="card-body">
+        <!-- <p class="card-text">{{data.id}}</p> -->
+      <!-- Title -->
+      <h4 class="card-title"><a>{{data.first_name}} {{data.last_name}}</a></h4>
+      <!-- Text -->
+      <p class="card-text">{{data.email}}</p>
+  
+    </div>
+  
+  </div>
+</div> 
+  <div class="bar">
+  <!-- <pagination-controls (pageChange)="getPage($event)"></pagination-controls>   -->
+  <pagination-controls (pageChange)="p=($event)"></pagination-controls>
+ 
+  </div>
+
+
+</div>
+
+</section>
+
+
+

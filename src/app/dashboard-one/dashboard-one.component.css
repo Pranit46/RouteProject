@@ -1,0 +1,155 @@
+.container-new{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    /* padding: 0 2rem; */
+    /* background: red; */
+    background: linear-gradient( -45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    /* background: -webkit-linear-gradient( -45deg,#44A08D,#093637); */
+    /* background: -webkit-linear-gradient( -45deg,#44A08D,); */
+    width: 100%;
+    background-size: 400% 400%;
+    z-index: -1px;
+    animation: changes 10s ease-in-out infinite;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@keyframes changes {
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.Tank{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    position: absolute;
+}
+
+.Tank-bar{
+    background: linear-gradient( -45de, #E73C7E, #23A6D5,);
+    /* background: -webkit-linear-gradient( -45deg,#093637,#44A08D); */
+    padding: 18px 15px;
+    width: 100%;
+    
+}
+
+.Tank-name{
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.Tank-end{
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    float: right;
+}
+
+
+.Tank-box{
+
+    position: absolute;
+    top:70%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    width: 80%;
+    margin: 0 auto;
+    height: 580px;
+    margin-top: -9em;
+    /* margin-left: -39em; */
+    border: 1px solid black;
+    background: #fff;
+    box-shadow: 0 8px 8px -3px rgba(0,0,0,0.5),
+    0 3px 14px 2px rgba(0,0,0, 0.5);
+    overflow: auto;
+    border-radius: 10px;
+    
+   
+}
+
+
+.wrapper{
+    display: flex;
+    
+}
+
+@media screen and (max-width: 960px){
+	.wrapper{
+		display: flex;
+        flex-direction: column;
+     
+        align-items: center;
+	}
+}
+
+
+
+.table{
+    text-align: left;
+}
+
+.card{
+    /* width: 20%;
+    height: 5%; */
+    top: 4%;
+    margin-left: 30px;
+    width: 20%;
+    margin: 10px;
+    display: inline-block;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 3%;
+    
+}
+
+@media screen and (max-width: 960px){
+	.card{
+		width: 50%;
+        margin: 0 0 20px 0;
+	}
+}
+
+
+
+
+.card-body:hover{
+    box-shadow: 0 8px 8px -3px rgba(0,0,0,0.5),
+    0 3px 14px 2px rgba(0,0,0, 0.5);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.card-img-top:hover{
+    box-shadow: 0 8px 8px -3px rgba(0,0,0,0.5),
+    0 3px 14px 2px rgba(0,0,0, 0.5);
+    transition: 0.5s;
+}
+
+
+.bar{
+    margin-top: 70px;
+}
+
+.text{
+    margin-top: 5px;
+    padding-left:15px;
+    color: #44A08D;
+    font-weight: bold;
+}

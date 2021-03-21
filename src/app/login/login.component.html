@@ -1,0 +1,50 @@
+<head>
+	<title>Animated Login Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="main" style="width: 100%;">
+	<img class="wave" src="../assets/images/wave.png">
+    <section class="container-new">
+        <div class="board">    
+            <ul>    
+                <li><a class="active" href="">Login</a></li>
+                <li><a href="">Sign Up</a></li>   
+            </ul>
+        </div>  
+		<div class="img" style="margin-top: 20%;" >
+			<img src="../assets/images/bg.svg"  >
+		</div>
+		<div class="login-content" style="margin-top: 20%;">
+			<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm);">
+				<img src="../assets/images/avtar.png">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one" >
+           		   <div class="i">
+           		   		<i class="fa fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<input type="email" class="input" [placeholder]="'email'" id="inputEmail4" name="emailAddressField" ngModel required>
+                        <!-- <small class="form-text text-muted" *ngIf="!emailAddressField.valid"> Please enter the email</small> -->
+                    </div>
+                 </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+                    <i class="fa fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<input type="password" class="input" [placeholder]="'Password'" id="PWD" name="passwordField" ngModel required>
+                           <!-- <small class="form-text text-muted" *ngIf="checkoutForm.get('Password').touched && checkoutForm.get('Password').hasError('required')"> Please enter at least 10 character</small> -->
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<button type="submit" routerLink="/Dashboard1" class="btn" value="Login" [disabled]="!loginForm.valid">Login</button>
+            </form>
+        </div>
+</section>
+    </div>
+
+</body>
